@@ -1,11 +1,13 @@
 import Header from "../Shared/Header/Header";
-import Navbar from "../Shared/Navbar/Navbar";
+import PhotoGallery from "./PhotoGallery/PhotoGallery";
 
 const Home = () => {
   return (
     <div>
-      <Navbar></Navbar>
       <Header></Header>
+      <div className="mt-6">
+        <PhotoGallery></PhotoGallery>
+      </div>
     </div>
   );
 };
