@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
   const { id, name, price, image } = service;
+
   return (
-    <div>
+    <div data-aos="zoom-in-up">
       <div className="card border border-violet-400 p-4">
         <figure>
           <img

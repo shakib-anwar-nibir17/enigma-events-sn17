@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
 import ServiceCard from "./ServiceCard";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Services = ({ services }) => {
   if (!services || !Array.isArray(services)) {
     return <div>No services available.</div>;
   }
+  AOS.init();
   return (
     <div>
       <h1 className="text-violet-400 text-4xl font-extrabold text-center mt-16 mb-16">
