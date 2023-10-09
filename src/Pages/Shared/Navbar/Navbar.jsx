@@ -25,6 +25,16 @@ const Navbar = () => {
       <li>
         <NavLink to="/faq">Faq</NavLink>
       </li>
+      {user && (
+        <>
+          <li>
+            <NavLink to="/discounts">Discounts</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+        </>
+      )}
     </>
   );
 
@@ -56,7 +66,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-          <h2 className="text-violet-400 text-2xl font-extrabold">
+          <h2 className="text-violet-400 text-2xl font-extrabold hidden md:block">
             ENIGMA EVENTS
           </h2>
         </div>
@@ -67,13 +77,28 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        {user && (
+        {user && user.displayName ? (
+          <div className="hidden md:block">
+            <h2>{user.displayName}</h2>
+          </div>
+        ) : user ? (
+          <div className="hidden md:block">
+            <h2>{user.email}</h2>
+          </div>
+        ) : null}
+        {user && user.photoURL ? (
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <div className="w-110 rounded-full ">
+              <img src={user.photoURL} />
+            </div>
+          </label>
+        ) : user ? (
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-110 rounded-full">
               <img src={userDefaultPic} />
             </div>
           </label>
-        )}
+        ) : null}
         {user ? (
           <button onClick={handleSignOut} className="btn btn-neutral">
             Log out
