@@ -1,7 +1,7 @@
 import aboutUsPic from "../../assets/images/about-us-2.jpg";
 const About = () => {
   return (
-    <div className="space-y-5 container mx-auto mb-28">
+    <div className="space-y-5 container mx-auto mb-28 px-4">
       <div>
         <img className="w-full" src={aboutUsPic} alt="" />
       </div>

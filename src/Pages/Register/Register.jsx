@@ -4,7 +4,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, signInWithGoogle } = useContext(AuthContext);
   const [registerError, setRegisterError] = useState("");
   const navigate = useNavigate();
 
@@ -44,6 +44,24 @@ const Register = () => {
         console.error(error);
       });
   };
+
+  const handleGoogleSignIn = (e) => {
+    e.preventDefault();
+
+    signInWithGoogle()
+      .then((res) => {
+        console.log(res.user);
+        Swal.fire({
+          icon: "success",
+          title: "Congratulation",
+        });
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div className="container mx-auto">
       <div className="hero min-h-screen bg-base-200">
@@ -93,6 +111,14 @@ const Register = () => {
                 <button className="btn btn-primary">Register</button>
               </div>
             </form>
+            <div className="w-full flex justify-center">
+              <button
+                onClick={handleGoogleSignIn}
+                className="btn border-violet-400 border-2"
+              >
+                Sign in with Google
+              </button>
+            </div>
             {registerError && (
               <p className="text-red-400 text-center mb-6">{registerError}</p>
             )}

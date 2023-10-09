@@ -25,7 +25,10 @@ const ServiceDetail = () => {
     <div className="container mx-auto">
       <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row">
-          <img src={image} className="w-1/2 h-full rounded-lg shadow-2xl" />
+          <img
+            src={image}
+            className="w-full lg:w-1/2 h-full rounded-lg shadow-2xl"
+          />
           <div>
             <h1 className="text-5xl font-bold">{name}</h1>
             <p className="py-6">{short_description}</p>

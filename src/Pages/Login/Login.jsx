@@ -4,7 +4,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const { userSignIn } = useContext(AuthContext);
+  const { userSignIn, signInWithGoogle } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -30,6 +30,23 @@ const Login = () => {
           icon: "error",
           title: "Invalid Login Credential",
           text: "Check if you have typed the correct password or email",
+        });
+      });
+  };
+
+  const handleLoginWithGoogle = () => {
+    signInWithGoogle()
+      .then((res) => {
+        console.log(res.user);
+        Swal.fire({
+          icon: "success",
+        });
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+        Swal.fire({
+          icon: "error",
         });
       });
   };
@@ -70,6 +87,14 @@ const Login = () => {
                 <button className="btn btn-primary">Login</button>
               </div>
             </form>
+            <div className="w-full flex justify-center">
+              <button
+                onClick={handleLoginWithGoogle}
+                className="btn border-violet-400 border-2"
+              >
+                Login with Google
+              </button>
+            </div>
             <p className="p-6 text-center font-bold">
               Do not have a Account Please{" "}
               <Link className="text-blue-400" to="/register">

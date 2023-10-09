@@ -7,11 +7,11 @@ const KnowUs = () => {
       <h2 className="text-violet-400 text-4xl font-extrabold text-center mt-16 mb-16">
         Learn About Us
       </h2>
-      <div className="flex">
-        <div className="w-1/2">
+      <div className="flex flex-col-reverse lg:flex-row">
+        <div className="w-full lg:w-1/2">
           <img className="w-full" src={knowUsPic} alt="" />
         </div>
-        <div className="w-1/2 px-4">
+        <div className="w-full lg:w-1/2 px-4">
           <p className="text-semibold text-justify text-2xl">
             <span className="text-5xl text-violet-400">AT ENIGMA EVENTS,</span>{" "}
             we are not just event managers; we are curators of unforgettable

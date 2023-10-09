@@ -7,10 +7,10 @@ const Header = () => {
           "url('https://i.ibb.co/VJQHbkR/tijs-van-leur-Wi-Tisob-9dw-unsplash.jpg')",
       }}
     >
-      <h2 className="text-7xl text-white px-4">
+      <h2 className=" text-2xl md:text-7xl text-white px-4">
         Enigma Events: Unveiling Unforgettable Experiences
       </h2>
-      <button className="bg-violet-600 p-4 w-1/6 mt-4 text-white font-bold">
+      <button className="bg-violet-600 p-4 w-1/4 md:w-1/6 mt-4 text-white font-bold">
         Join Us
       </button>
     </div>
