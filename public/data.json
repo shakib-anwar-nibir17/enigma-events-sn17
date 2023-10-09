@@ -1,0 +1,50 @@
+[
+  {
+    "id": "MS38jarKor",
+    "event_id": "1",
+    "name": "Fashion Show Extravaganza",
+    "image": "https://i.ibb.co/NC8v0nQ/fashion-event.jpg",
+    "price": 1500,
+    "short_description": "Experience the glitz and glamour of the runway at our exclusive Fashion Show Extravaganza. Get ready for a night of haute couture, stunning models, and the latest fashion trends. This event is a must-attend for fashion enthusiasts and trendsetters alike. Join us for an evening of elegance and style that you won't want to miss."
+  },
+  {
+    "id": "d5kZPdlxp8",
+    "event_id": "2",
+    "name": "Instrument Event",
+    "image": "https://i.ibb.co/JCCQ0p5/instruement-event.jpg",
+    "price": 500,
+    "short_description": "Immerse yourself in the enchanting world of music at our Instrument Event. Listen to soul-stirring performances on instruments like the violin and experience the magic of live music. Join us for an evening of melodies that will touch your heart and soul."
+  },
+  {
+    "id": "VjBw2SFAyh",
+    "event_id": "3",
+    "name": "Movie Screening Nights",
+    "image": "https://i.ibb.co/Q65x0gv/movie-event.jpg",
+    "price": 350,
+    "short_description": "Join us for Movie Screening Nights under the stars. Enjoy blockbuster movies in an outdoor setting, complete with comfy seating and delicious snacks. Bring your loved ones for a cinematic experience like no other. Grab your popcorn and let the show begin!"
+  },
+  {
+    "id": "aK4X8ta1Fl",
+    "event_id": 4,
+    "name": "Cosplay Event",
+    "image": "https://i.ibb.co/SXcZKcs/cosplay-event.jpg",
+    "price": 200,
+    "short_description": "Dive into the world of cosplay at our Cosplay Event. Whether you're a seasoned cosplayer or just curious about this vibrant subculture, our event is the perfect place to express your creativity. Join us for a day of cosplay, fandom, and unforgettable moments."
+  },
+  {
+    "id": "Pt1cfwq5l6",
+    "event_id": "5",
+    "name": "Crafts and Art Exhibition",
+    "image": "https://i.ibb.co/vZGgSK0/art-event.jpg",
+    "price": 150,
+    "short_description": "Explore the world of creativity at our Crafts and Art Exhibition. Discover exquisite artworks, handmade crafts, and unique creations by talented artists. Immerse yourself in the beauty of art and craftsmanship, and even purchase one-of-a-kind pieces to adorn your home."
+  },
+  {
+    "id": "gyvxh5Mi1N",
+    "event_id": "6",
+    "name": "Concerts and Live Music",
+    "image": "https://i.ibb.co/rkk9T2B/movie-screening.jpg",
+    "price": 50,
+    "short_description": "Feel the rhythm and experience the magic of live music at our Concerts and Live Music events. From rock to jazz, our concerts feature top-notch artists and bands that will make your heart sing. Join us for a night of melodies, dance, and pure entertainment."
+  }
+]
