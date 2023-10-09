@@ -23,6 +23,11 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error);
+        Swal.fire({
+          icon: "error",
+          title: "Invalid Login Credential",
+          text: "Check if you have typed the correct password or email",
+        });
       });
   };
   return (

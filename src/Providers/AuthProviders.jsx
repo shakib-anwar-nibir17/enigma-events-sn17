@@ -9,10 +9,7 @@ import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import app from "../Firebase/firebase.config";
 
-//import auth from firebase
 const auth = getAuth(app);
-
-// create a context
 
 export const AuthContext = createContext(null);
 
