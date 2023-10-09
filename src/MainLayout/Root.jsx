@@ -3,7 +3,7 @@ import Navbar from "../Pages/Shared/Navbar/Navbar";
 
 const Root = () => {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto font-roboto">
       <Navbar></Navbar>
       <Outlet></Outlet>
     </div>
