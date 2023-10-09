@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const Login = () => {
+  const { userSignIn } = useContext(AuthContext);
+
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(e.currentTarget);
@@ -8,6 +13,17 @@ const Login = () => {
     const email = form.get("email");
     const password = form.get("password");
     console.log(email, password);
+
+    userSignIn(email, password)
+      .then((res) => {
+        console.log(res.user);
+        Swal.fire({
+          icon: "success",
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
   return (
     <div className="container mx-auto">
@@ -41,11 +57,6 @@ const Login = () => {
                   className="input input-bordered"
                   required
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div className="w-1/2 mx-auto form-control mt-6">
                 <button className="btn btn-primary">Login</button>

@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+
   const handleRegister = (e) => {
     e.preventDefault();
     console.log(e.currentTarget);
@@ -9,6 +14,19 @@ const Register = () => {
     const email = form.get("email");
     const password = form.get("password");
     console.log(name, email, password);
+
+    createUser(email, password)
+      .then((res) => {
+        console.log(res.user);
+        Swal.fire({
+          icon: "success",
+          title: "Congratulation",
+          text: "You have successfully Registered",
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
   return (
     <div className="container mx-auto">
@@ -54,11 +72,6 @@ const Register = () => {
                   className="input input-bordered"
                   required
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div className="w-1/2 mx-auto form-control mt-6">
                 <button className="btn btn-primary">Register</button>
